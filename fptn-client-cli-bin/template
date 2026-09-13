@@ -1,6 +1,6 @@
 # Template file for 'fptn-client-cli-bin'
 pkgname=fptn-client-cli-bin
-version=0.4.4
+version=0.4.5
 revision=1
 archs="x86_64"
 short_desc="Non-commercial VPN, a volunteer project for bypassing censorship (CLI client)"
@@ -8,7 +8,7 @@ maintainer="Terromur <terromuroz@proton.me>"
 license="MIT"
 homepage="https://github.com/batchar2/fptn"
 distfiles="https://github.com/batchar2/fptn/releases/download/${version}/fptn-client-cli-${version}-ubuntu22.04-amd64.deb"
-checksum="d136f46493dcee767bcd09beee5ca1ea3fbd37eb5b1cfad310c5a0399c5c1f8f"
+checksum="768fcb604904875305bd9fccb0638e8c6ae44b6ec405db0dffbc4f24347c56f4"
 noshlibprovides=yes
 nostrip=yes
 do_install() {
