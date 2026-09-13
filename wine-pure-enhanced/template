@@ -11,8 +11,8 @@ distfiles="
  https://gitlab.winehq.org/wine/wine/-/archive/${_commit}/wine-${_commit}.tar.gz
  https://gitlab.winehq.org/wine/wine-staging/-/archive/${_staging_commit}/wine-staging-${_staging_commit}.tar.gz"
 checksum="
- 6ec14bcd0e48b6e1a24b557a2b6c5c1e2b4f69245211efbf668464cc7cd2c9cc
- 66eb1adef281808467a5ee86316055bd7285efa19f7b9581dd979e567f438c39"
+ 96f6daef5962ef319879c50638fb4a1780f1eefff678ef514f2a3faab2604336
+ 768aaf57643741a04477e6d70cc59014c350edc9e9a7bae8d5840aea9e19a034"
 build_style=gnu-configure
 configure_args="
  --disable-tests

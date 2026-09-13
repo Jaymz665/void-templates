@@ -1,6 +1,6 @@
 pkgname=wine-pure-enhanced-exp
 version=11.17
-revision=5
+revision=6
 _commit=8f8792fc857ba609b13c6d63839034e0576b0c9f
 _staging_commit=dc020173dc36007d06a88ff3fc5866de7faba826
 short_desc="Bleeding-edge Wine build (Staging, WoW64, Wayland) with enhanced patches (proton-ge-custom, wine-osu-patches and more)"
@@ -11,8 +11,8 @@ distfiles="
  https://gitlab.winehq.org/wine/wine/-/archive/${_commit}/wine-${_commit}.tar.gz
  https://gitlab.winehq.org/wine/wine-staging/-/archive/${_staging_commit}/wine-staging-${_staging_commit}.tar.gz"
 checksum="
- 6ec14bcd0e48b6e1a24b557a2b6c5c1e2b4f69245211efbf668464cc7cd2c9cc
- 66eb1adef281808467a5ee86316055bd7285efa19f7b9581dd979e567f438c39"
+ 96f6daef5962ef319879c50638fb4a1780f1eefff678ef514f2a3faab2604336
+ 768aaf57643741a04477e6d70cc59014c350edc9e9a7bae8d5840aea9e19a034"
 build_style=gnu-configure
 configure_args="
  --disable-tests
@@ -177,10 +177,7 @@ pre_configure() {
         -not -path "${wine_osu_patches_dir}/0005-windowing-system-integration/0001-misc/0013-winex11.drv-Do-not-enable-disable-XInput2-when-clipp.patch" \
         -not -path "${wine_osu_patches_dir}/0005-windowing-system-integration/0001-misc/0014-winecfg-Add-a-checkbox-to-enable-virtual-desktop-tas.patch" \
         -not -path "${wine_osu_patches_dir}/0005-windowing-system-integration/0002-proton/0008-winex11.drv-Only-process-raw-input-in-default-winsta.patch" \
-        -not -path "${wine_osu_patches_dir}/0006-audio/0005-alsa-pulse-mmdevapi-Support-custom-period-and-buffer-sizes.patch" \
-        -not -path "${wine_osu_patches_dir}/0006-audio/0008-pulse-mmdevapi-Some-simplifications-and-stability-im.patch" \
-        -not -path "${wine_osu_patches_dir}/0006-audio/0010-winepulse-Stop-forcing-period-to-twice-the-minimum-s.patch" \
-        -not -path "${wine_osu_patches_dir}/0006-audio/0011-mmdevapi-winealsa.drv-winepulse.drv-Allow-forcing-th.patch" \
+        -not -path "${wine_osu_patches_dir}/0006-audio/*" \
         -not -path "${wine_osu_patches_dir}/0007-proton-additions/0013-server-user32-Backport-more-raw-input-changes-from-P.patch" \
         -not -path "${wine_osu_patches_dir}/0008-winewayland-additions/*" \
         -not -path "${wine_osu_patches_dir}/9000-misc-additions/0009-win32u-Add-WINE_DISABLE_IME.patch" \
@@ -190,6 +187,7 @@ pre_configure() {
         -not -path "${wine_osu_patches_dir}/9000-misc-additions/0046-winex11-winewayland-Add-an-opt-in-absolute-tablet-in.patch" \
         -not -path "${wine_osu_patches_dir}/9000-misc-additions/0014-appwiz-Add-env.-vars-to-skip-mono-gecko-installation.patch" \
         -not -path "${wine_osu_patches_dir}/9000-misc-additions/0040-wineusb-usb-annoyances.patch" \
+        -not -path "${wine_osu_patches_dir}/9000-misc-additions/600hz-default.patch" \
         -print0 | sort -z)
     fi
     
