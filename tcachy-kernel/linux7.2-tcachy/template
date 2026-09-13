@@ -1,13 +1,13 @@
 # Template file for 'linux7.2-tcachy'
 pkgname=linux7.2-tcachy
-version=7.2.4
+version=7.2.5
 revision=1
 short_desc="Linux kernel and modules (${version%.*} series) with CachyOS/tkg/clear/cachymod patches with clang"
 maintainer="Terromur <terromuroz@proton.me>"
 license="GPL-2.0-only"
 homepage="https://github.com/CachyOS/linux-cachyos"
 distfiles="https://github.com/CachyOS/linux/releases/download/cachyos-${version}-1/cachyos-${version}-1.tar.gz"
-checksum=40099115ec06ab2a780e61e9844b485712d497b4082b1e4a216fbec362c5360f
+checksum=ff940b3a3a04a3fd15520814b08b240fddcddce696f805ae00a0584be0aba1c7
 python_version=3
 
 build_options="bore o3 performance hz100 hz250 hz300 hz500 hz600 hz750 hz800 hz1000 tick_periodic tick_idle tick_full native_cpu disable_paravirt disable_debug disable_security io_net_opt cpu_opt storage_fs misc_opt disable_virt disable_cgroups x86_64_v3 lto_full lto_thin"
