@@ -1,5 +1,5 @@
 pkgname=fptn-client-bin
-version=0.4.4
+version=0.4.5
 revision=1
 archs="x86_64"
 short_desc="Non-commercial VPN, a volunteer project for bypassing censorship (GUI client)"
@@ -7,7 +7,7 @@ maintainer="Terromur <terromuroz@proton.me>"
 license="MIT"
 homepage="https://github.com/batchar2/fptn"
 distfiles="https://github.com/batchar2/fptn/releases/download/${version}/fptn-client-${version}-ubuntu22.04-amd64.deb"
-checksum="008e282502d706ae9b41be8c0e24d29e20e3403c94db3086c3d59e51df1dd017"
+checksum="978f400536b567bd8bb79976c0f53589bdc5bdd2be12f3a96994e42ecb14ee5f"
 nostrip=yes
 nocheck=yes
 do_install() {
