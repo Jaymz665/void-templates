@@ -1,0 +1,35 @@
+# Template file for 'serein'
+pkgname=serein
+version=1.0.0
+revision=1
+_nightly="20260915.23"
+_distver="${version}-nightly.${_nightly}"
+build_style=cargo
+hostmakedepends="cargo cmake nasm python3 perl pkgconf"
+makedepends="gtk4-devel libwebkitgtk60-devel alsa-lib-devel libxkbcommon-devel"
+depends="vulkan-loader"
+short_desc="Unofficial native Discord client written in Rust (nightly)"
+maintainer="Terromur <terromuroz@proton.me>"
+license="MIT, Apache-2.0"
+homepage="https://github.com/ViceVerse-cz/Serein"
+changelog="${homepage}/releases"
+distfiles="${homepage}/archive/refs/tags/v${_distver}.tar.gz"
+checksum=b5fbfa200bf3fef0fa67d28790f2875d8bf376302464c7923a413e5a6c378791
+pre_build() {
+	rm -f rust-toolchain.toml
+}
+do_install() {
+	vbin target/${RUST_TARGET}/release/serein
+	post_install
+}
+post_install() {
+	vinstall "${FILESDIR}/cz.viceverse.serein.desktop" 644 \
+		usr/share/applications
+
+	vinstall "packaging/linux/hicolor/256x256/apps/serein.png" 644 \
+		usr/share/icons/hicolor/256x256/apps "cz.viceverse.serein.png"
+
+	vlicense LICENSE-MIT
+	vlicense LICENSE-APACHE
+	vlicense THIRD_PARTY_NOTICES.md
+}

@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Serein
+GenericName=Discord Client
+Comment=Unofficial native Discord client written in Rust
+Exec=serein %U
+TryExec=serein
+Icon=cz.viceverse.serein
+Terminal=false
+StartupNotify=true
+StartupWMClass=cz.viceverse.serein
+Categories=Network;InstantMessaging;Chat;
+Keywords=discord;chat;messaging;voice;
+MimeType=x-scheme-handler/discord;
