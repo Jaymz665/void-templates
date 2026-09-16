@@ -1,0 +1,16 @@
+# Template file for 'neofetchex'
+pkgname=neofetchex
+version=7.2.0
+revision=1
+build_style=gnu-makefile
+depends="bash"
+short_desc="Minimalistic command-line system information tool"
+maintainer="Terromur <terromuroz@proton.me>"
+license="MIT"
+homepage="https://github.com/techyminati/neofetchextended"
+distfiles="${homepage}/archive/v${version}/${pkgname}-${version}.tar.gz"
+checksum=521a2b470383fb699a263daa8633f82d30b84c599450257903d9698b5273cf69
+conflicts="neofetch"
+post_install() {
+	vlicense LICENSE.md
+}
