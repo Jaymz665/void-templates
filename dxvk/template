@@ -1,6 +1,6 @@
-# Template file for 'dxvk-low-latency'
-pkgname=dxvk-low-latency
-version=3.0.2
+# Template file for 'dxvk'
+pkgname=dxvk
+version=3.1.1
 revision=1
 archs="x86_64"
 hostmakedepends="meson ninja glslang git cross-i686-w64-mingw32 cross-x86_64-w64-mingw32"
@@ -11,13 +11,13 @@ maintainer="Terromur <terromuroz@proton.me>"
 license="zlib/libpng"
 homepage="https://github.com/doitsujin/dxvk"
 provides="dxvk-${version}_${revision}"
-conflicts="dxvk dxvk-avx dxvk-low-latency-avx"
+conflicts="dxvk-low-latency dxvk-low-latency-avx dxvk-avx"
 nofetch=yes
 noextract=yes
 patch_args="-Np1"
 do_fetch() {
     msg_normal "Cloning DXVK git repository (master branch)...\n"
-    git clone --depth 1 --branch low-latency-framepacing https://github.com/netborg-afps/dxvk-low-latency.git ${wrksrc}
+    git clone --depth 1 https://github.com/doitsujin/dxvk.git ${wrksrc}
     cd ${wrksrc}
     msg_normal "Initializing submodules...\n"
     git submodule update --init --depth 1 --recursive
