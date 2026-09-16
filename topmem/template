@@ -1,14 +1,12 @@
 # Template file for 'topmem'
 pkgname=topmem
 version=1.0
-revision=1
-depends="python3-psutil"
+revision=2
 short_desc="Shows top 10 memory processes"
 maintainer="Terromur <terromuroz@proton.me>"
-license="MIT"
-homepage="https://github.com/raffleberry/topmem"
-distfiles="https://github.com/raffleberry/topmem/archive/refs/heads/main.zip"
-checksum=d90e170d361551a19656451eece81c119264248ed9f380e5197a88a334f9ceee
+license="GPL-3.0-or-later"
+homepage="https://github.com/CachyOS/CachyOS-Settings"
+depends="lua54"
 do_install() {
-    vbin topmem
+    vbin "${FILESDIR}/topmem"
 }
