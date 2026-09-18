@@ -11,4 +11,3 @@ diff -rup meson.build.orig meson.build
  ]
  
  gdm_gnome_user_session_wanted_components = gdm_gnome_session_required_components
-
