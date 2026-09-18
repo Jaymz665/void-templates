@@ -1,0 +1,30 @@
+# Template file for 'mercurygram-desktop-bin'
+pkgname=mercurygram-desktop-bin
+version=7.2.9.1
+revision=1
+archs="x86_64"
+short_desc="Mercurygram Desktop messaging app"
+maintainer="Terromur <terromuroz@proton.me>"
+license="GPL-3.0-or-later WITH OpenSSL-exception"
+homepage="https://github.com/Mercurygram/mdesktop"
+depends="glib hicolor-icon-theme libdispatch libxcb libXcomposite libXdamage libXext libXfixes libxkbcommon libXrandr libXtst openssl qt6-base qt6-imageformats qt6-svg qt6-wayland zlib"
+nostrip=yes
+nodebug=yes
+distfiles="https://github.com/Mercurygram/mdesktop/releases/download/v${version}/Mercurygram-${version}-linux-x86_64.tar.xz"
+checksum="41623ddbcc96a4a741219931db2e49487d534b29891245f48530b7fbdf9963bc"
+do_install() {
+    vbin Mercurygram
+
+    vinstall "$FILESDIR/it.belloworld.mercurygram.desktop" 644 usr/share/applications
+
+    vmkdir usr/share/dbus-1/services
+    cat <<EOF > ${DESTDIR}/usr/share/dbus-1/services/it.belloworld.mercurygram.service
+[D-BUS Service]
+Name=it.belloworld.mercurygram
+Exec=/usr/bin/Mercurygram
+EOF
+
+    for size in 16 32 48 64 128 256 512; do
+        vinstall "$FILESDIR/icon${size}.png" 644 usr/share/icons/hicolor/${size}x${size}/apps it.belloworld.mercurygram.png
+    done
+}
