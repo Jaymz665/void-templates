@@ -18,11 +18,6 @@ do_install() {
     vinstall "$FILESDIR/it.belloworld.mercurygram.desktop" 644 usr/share/applications
 
     vmkdir usr/share/dbus-1/services
-    cat <<EOF > ${DESTDIR}/usr/share/dbus-1/services/it.belloworld.mercurygram.service
-[D-BUS Service]
-Name=it.belloworld.mercurygram
-Exec=/usr/bin/Mercurygram
-EOF
 
     for size in 16 32 48 64 128 256 512; do
         vinstall "$FILESDIR/icon${size}.png" 644 usr/share/icons/hicolor/${size}x${size}/apps it.belloworld.mercurygram.png
