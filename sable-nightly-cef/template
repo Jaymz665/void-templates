@@ -1,6 +1,6 @@
 # Template file for 'sable-nightly-cef'
 pkgname=sable-nightly-cef
-version=1.21.1
+version=1.22.2
 revision=1
 archs="x86_64"
 hostmakedepends="git pnpm python3 cargo pkg-config"
