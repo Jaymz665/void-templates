@@ -1,8 +1,8 @@
 # Template file for 'serein'
 pkgname=serein
 version=1.0.0
-revision=3
-_nightly="20260918.37"
+revision=4
+_nightly="20260918.39"
 _distver="${version}-nightly.${_nightly}"
 build_style=cargo
 hostmakedepends="cargo cmake nasm python3 perl pkgconf"
@@ -14,7 +14,7 @@ license="MIT, Apache-2.0"
 homepage="https://github.com/ViceVerse-cz/Serein"
 changelog="${homepage}/releases"
 distfiles="${homepage}/archive/refs/tags/v${_distver}.tar.gz"
-checksum=0cbac9966ba81fd670ca5103024adb93692b3e5d5f10b1b7da1d9a9c2e7fa4a0
+checksum=af658315bc3df548ae11f74ef8528ef3e4fb2919970b5b7935772cbaa764fcb5
 pre_build() {
 	rm -f rust-toolchain.toml
 }
