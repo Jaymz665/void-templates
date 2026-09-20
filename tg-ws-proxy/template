@@ -1,6 +1,6 @@
 # Template file for 'tg-ws-proxy'
 pkgname=tg-ws-proxy
-version=1.10.2
+version=1.10.4
 revision=1
 archs="x86_64"
 short_desc="Telegram Desktop WebSocket bridge proxy"
