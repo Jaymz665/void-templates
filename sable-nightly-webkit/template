@@ -1,6 +1,6 @@
 # Template file for 'sable-nightly-webkit'
 pkgname=sable-nightly-webkit
-version=1.22.4
+version=1.22.5
 revision=1
 archs="x86_64"
 hostmakedepends="git nodejs pnpm cargo rust pkg-config"
