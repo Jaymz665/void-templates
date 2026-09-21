@@ -1,10 +1,9 @@
 # Template file for 'dxvk-low-latency'
 pkgname=dxvk-low-latency
-version=3.0.2
+version=3.1.1
 revision=1
 archs="x86_64"
 hostmakedepends="meson ninja glslang git cross-i686-w64-mingw32 cross-x86_64-w64-mingw32"
-makedepends=""
 depends="vulkan-loader"
 short_desc="A Vulkan-based compatibility layer for Direct3D 9/10/11 for Wine (Windows DLL version)"
 maintainer="Terromur <terromuroz@proton.me>"
