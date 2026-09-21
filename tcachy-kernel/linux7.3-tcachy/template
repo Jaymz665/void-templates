@@ -12,7 +12,7 @@ python_version=3
 
 build_options="bore o3 performance hz100 hz250 hz300 hz500 hz600 hz750 hz800 hz1000 tick_periodic tick_idle tick_full native_cpu disable_paravirt disable_debug disable_security io_net_opt cpu_opt storage_fs misc_opt disable_virt disable_cgroups x86_64_v3 lto_full lto_thin"
 
-build_options_default="o3 hz800 tick_full native_cpu disable_paravirt disable_security io_net_opt cpu_opt storage_fs misc_opt disable_virt lto_full disable_cgroups"
+build_options_default="o3 tick_full native_cpu io_net_opt cpu_opt storage_fs misc_opt lto_thin"
 
 desc_option_bore="Enable BORE CPU scheduler"
 desc_option_o3="Enable KBUILD_CFLAGS -O3 compiler optimization"
