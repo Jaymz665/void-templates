@@ -1,6 +1,6 @@
 # Template file for 'dxvk-low-latency-avx'
 pkgname=dxvk-low-latency-avx
-version=3.0.2
+version=3.1.1
 revision=1
 archs="x86_64"
 hostmakedepends="meson ninja glslang git llvm-mingw-bin"
