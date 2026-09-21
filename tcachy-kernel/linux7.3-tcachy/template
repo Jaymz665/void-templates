@@ -650,7 +650,7 @@ do_install() {
 	rm -f ${DESTDIR}/lib
 }
 
-linux7.2-tcachy-headers_package() {
+linux7.3-tcachy-headers_package() {
 	preserve=yes
 	nostrip=yes
 	noshlibprovides=yes
@@ -661,7 +661,7 @@ linux7.2-tcachy-headers_package() {
 	}
 }
 
-linux7.2-tcachy-dbg_package() {
+linux7.3-tcachy-dbg_package() {
 	preserve=yes
 	nostrip=yes
 	noverifyrdeps=yes
