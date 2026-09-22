@@ -1,15 +1,15 @@
 # Template file for 'gnome-shell'
 pkgname=gnome-shell
 version=51.0
-revision=1
+revision=3
 build_style=meson
 build_helper=gir
 configure_args="-Dsystemd=false -Dtests=false
  -Dsystemduserunitdir=/usr/lib/systemd/user"
 hostmakedepends="libxslt pkg-config python3 sassc
- asciidoc perl glib-devel gettext gjs-devel gtk-update-icon-cache
+ asciidoc perl glib-devel gettext gtk-update-icon-cache
  python3-docutils"
-makedepends="gnome-control-center-devel at-spi2-atk-devel
+makedepends="gnome-control-center-devel at-spi2-atk-devel zlib-devel
  evolution-data-server-devel mutter-devel gsettings-desktop-schemas-devel
  polkit-devel startup-notification-devel ibus-devel gnome-desktop-devel
  NetworkManager-devel pulseaudio-devel gtk4-devel gnome-autoar-devel gjs-devel
@@ -25,6 +25,10 @@ homepage="https://wiki.gnome.org/Projects/GnomeShell"
 changelog="https://gitlab.gnome.org/GNOME/gnome-shell/-/raw/gnome-50/NEWS"
 distfiles="${GNOME_SITE}/gnome-shell/${version%%.*}/gnome-shell-${version}.tar.xz"
 checksum=2179bab13af353427065096af8bf3d30da7b86e0c516e5ba86a14998af9575f6
+
+pre_configure() {
+    export LDFLAGS="$LDFLAGS -Wl,--copy-dt-needed-entries"
+}
 
 do_check() {
 	mkdir /tmp/gnome-shell-xdg
